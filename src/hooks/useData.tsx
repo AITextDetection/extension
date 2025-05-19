@@ -22,12 +22,12 @@ export const useCheckScore = () => {
     try {
       const sentences = splitTextByWordLimitAndPunctuation(text);
       // TODO : remove later
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      // await new Promise((resolve) => setTimeout(resolve, 1500));
       const results = await Promise.all(
         sentences.map(async (sentence) => {
           return {
-            // score: (await handleScoreApi(sentence))?.score,
-            score: parseFloat((Math.random() * 100).toFixed(2)),
+            score: (await handleScoreApi(sentence))?.score,
+            // score: parseFloat((Math.random() * 100).toFixed(2)),
             len: sentence.length,
             sentence: sentence,
           };

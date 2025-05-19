@@ -10,16 +10,16 @@ interface Props {
   data: SentenceData[];
 }
 
-// Version 1: Text Color Gradients + Tooltip
 const getHighlightByScore = (score: number): string => {
-  if (score > 80) return "bg-red-500/20 text-red-800 dark:text-red-100";
-  if (score > 60)
-    return "bg-orange-400/20 text-orange-800 dark:text-orange-100";
+  if (score > 90)
+    return "bg-red-400 text-red-800 dark:bg-red-800 dark:text-red-100";
+  if (score > 70)
+    return "bg-red-200 text-red-800 dark:bg-red-700 dark:text-red-100";
+  if (score > 50)
+    return "bg-orange-300 text-orange-800 dark:bg-orange-700 dark:text-orange-100";
   if (score > 30)
-    return "bg-yellow-300/30 text-yellow-800 dark:text-yellow-100";
-  if (score > 10)
-    return "bg-emerald-300/30 text-emerald-800 dark:text-emerald-100";
-  return "bg-sky-300/30 text-sky-800 dark:text-sky-100";
+    return "bg-yellow-200 text-yellow-800 dark:bg-yellow-600 dark:text-yellow-100";
+  return "bg-green-200 text-green-800 dark:bg-green-700 dark:text-green-100";
 };
 
 const SegmentedParagraph = ({ data }: Props) => {

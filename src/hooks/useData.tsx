@@ -8,8 +8,8 @@ export type API_RESPONSE = {
 export const adjustScore = (score: number, index: number): number => {
   const adjustmentMap: Record<number, number> = {
     0: 9,
-    1: 23,
-    2: 17,
+    1: 13,
+    2: 7,
   };
 
   if (score < 10 && index in adjustmentMap) {

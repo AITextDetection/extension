@@ -11,12 +11,12 @@ interface Props {
 }
 
 const getHighlightByScore = (score: number): string => {
-  if (score > 90)
-    return "bg-red-400 text-red-800 dark:bg-red-800 dark:text-red-100";
+  if (score > 85)
+    return "bg-red-200 text-red-900 dark:bg-red-800 dark:text-red-100";
   if (score > 70)
-    return "bg-red-200 text-red-800 dark:bg-red-700 dark:text-red-100";
+    return "bg-orange-200 text-orange-800 dark:bg-orange-700 dark:text-orange-100";
   if (score > 50)
-    return "bg-orange-300 text-orange-800 dark:bg-orange-700 dark:text-orange-100";
+    return "bg-red-100 text-red-800 dark:bg-red-700 dark:text-red-100";
   if (score > 30)
     return "bg-yellow-200 text-yellow-800 dark:bg-yellow-600 dark:text-yellow-100";
   return "bg-green-200 text-green-800 dark:bg-green-700 dark:text-green-100";
